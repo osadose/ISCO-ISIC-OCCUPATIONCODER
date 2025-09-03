@@ -1,0 +1,35 @@
+# Default configuration for NBS code cleaner
+general:
+  # auto_accept_threshold: not used for forced accept in v0.1; emitted confidence only
+  auto_accept_threshold: 0.80
+  # below this value a row goes into the review queue
+  review_threshold: 0.6
+  max_candidates: 200
+
+fields:
+  title_fields:
+    - Job_Title
+    - Occupation
+  description_fields:
+    - Job_Description
+    - Duties
+    - Tasks
+  sector_fields:
+    - Job_Sector
+    - Industry
+    - Employer_Sector
+
+output:
+  include_titles: true
+  include_descriptions: false
+  add_agreement_flags: true
+
+# synonyms file path (relative to this package when config_path is not provided)
+synonyms_file: "synonyms.csv"
+
+matching:
+  use_semantic: true
+  fuzz_weight: 0.5
+  embed_weight: 0.5
+  fuzz_top_k: 20
+  sem_top_k: 5

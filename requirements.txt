@@ -1,0 +1,8 @@
+pandas>=1.3
+openpyxl
+pyyaml
+rapidfuzz>=2.0
+click
+sentence-transformers
+torch
+tqdm
